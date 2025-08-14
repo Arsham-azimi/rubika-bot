@@ -1,4 +1,4 @@
-# rubika-bot
+# rubika-Anonymous-Bot
 Rubika Anonymous Chat Bot | ربات چت ناشناس روبیکا
 
 A complete PHP-based bot for anonymous chatting on Rubika with high security.
