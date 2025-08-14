@@ -29,7 +29,7 @@ Setup Instructions | راه‌اندازی
 
 1. Download or clone this repository:
 
-git clone https://github.com/Arsham-azimi/Rubika-Anonymous-Chat-Bot.git
+git clone https://github.com/Arsham-azimi/rubika-bot.git
 
 پروژه را دانلود یا کلون کنید
 
@@ -63,7 +63,7 @@ other PHP files
 
 Links | لینک‌ها
 
-Website | وب‌سایت: arsham-kurddev.ir
+Website | وب‌سایت: https://arsham-kurddev.ir
 
 GitHub Profile | پروفایل گیت‌هاب: Arsham-azimi
 
