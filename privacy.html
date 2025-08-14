@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="قوانین و حریم خصوصی ربات روبی چت - اولین ربات چت ناشناس هوشمند در روبیکا">
+    <meta name="keywords" content="قوانین روبی چت, حریم خصوصی روبیکا, Ruby Chat rules, privacy policy, چت ناشناس">
+    <meta name="author" content="تیم روبی چت">
+    <meta property="og:title" content="قوانین و حریم خصوصی | روبی چت">
+    <meta property="og:description" content="قوانین و مقررات استفاده از ربات چت ناشناس روبی چت در پیام‌رسان روبیکا">
+    <meta property="og:url" content="https://rubika.ir/rubychat/privacy">
+    <meta property="og:type" content="website">
+    <title>قوانین و حریم خصوصی | روبی چت</title>
+    
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css">
+    
+    <style>
+        :root {
+            --primary-color: #E91E63;
+            --primary-light: #F48FB1;
+            --secondary-color: #9C27B0;
+            --accent-color: #FF9800;
+            --dark-color: #212121;
+            --light-color: #F5F5F5;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            font-family: 'Vazir', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: var(--dark-color);
+            line-height: 1.7;
+            scroll-behavior: smooth;
+            padding-top: 80px;
+        }
+        
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar-brand i {
+            font-size: 1.8rem;
+            margin-left: 10px;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            color: var(--dark-color);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        
+      
+        .btn {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: var(--gradient);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            transition: width 0.3s ease;
+            z-index: -1;
+        }
+        
+        .btn-primary:hover::before {
+            width: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(233, 30, 99, 0.3);
+        }
+        
+       
+        .rules-header {
+            background: var(--gradient);
+            color: white;
+            padding: 120px 0 60px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .rules-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom center;
+            background-size: cover;
+            z-index: 0;
+        }
+        
+        .rules-header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .rules-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .rules-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .rules-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .rules-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .rules-nav {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+        }
+        
+        .rules-nav .nav-link {
+            padding: 10px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            color: var(--dark-color);
+        }
+        
+        .rules-nav .nav-link:hover, .rules-nav .nav-link.active {
+            background-color: rgba(233, 30, 99, 0.1);
+            color: var(--primary-color);
+        }
+        
+        .rules-section {
+            margin-bottom: 40px;
+        }
+        
+        .rules-section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .rules-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 3px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+        
+        .rules-item {
+            margin-bottom: 25px;
+        }
+        
+        .rules-item-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .rules-item-content {
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .rules-item-content ul {
+            padding-right: 20px;
+        }
+        
+        .rules-item-content li {
+            margin-bottom: 8px;
+        }
+        
+      
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-logo i {
+            font-size: 2rem;
+            margin-left: 10px;
+        }
+        
+        .footer-about {
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+        }
+        
+        .footer-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: white;
+            position: relative;
+        }
+        
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
+            position: relative;
+            padding-right: 15px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-right: 20px;
+            text-decoration: none;
+        }
+        
+        .footer-links a::before {
+            content: '\F285';
+            font-family: bootstrap-icons;
+            position: absolute;
+            right: 0;
+            top: 2px;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover::before {
+            opacity: 1;
+            right: -5px;
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+        
+       
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .delay-1 { transition-delay: 0.2s; }
+        .delay-2 { transition-delay: 0.4s; }
+        
+       
+        @media (max-width: 992px) {
+            .rules-title {
+                font-size: 2.3rem;
+            }
+            
+            .rules-sidebar {
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .rules-header {
+                padding: 100px 0 40px;
+                text-align: center;
+            }
+            
+            .rules-title {
+                font-size: 2rem;
+            }
+            
+            .rules-subtitle {
+                font-size: 1rem;
+            }
+            
+            .rules-container {
+                padding: 25px;
+            }
+            
+            .rules-section-title {
+                font-size: 1.5rem;
+            }
+            
+            .navbar-collapse {
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 15px;
+                box-shadow: var(--shadow);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .rules-title {
+                font-size: 1.8rem;
+            }
+            
+            body {
+                padding-top: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="https://arsham-kurddev.ir/ruby-chat">
+                <i class="bi bi-chat-dots"></i>
+                روبی چت
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://arsham-kurddev.ir/ruby-chat">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="privacy.html">قوانین و حریم خصوصی</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="https://rubika.ir/rubychat_bot" class="btn btn-primary" target="_blank">
+                        <i class="bi bi-robot"></i> شروع چت
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+  
+    <header class="rules-header">
+        <div class="container">
+            <div class="rules-header-content">
+                <h1 class="rules-title animate-on-scroll">قوانین و حریم خصوصی روبی چت</h1>
+                <p class="rules-subtitle animate-on-scroll delay-1">لطفاً قبل از استفاده از ربات، قوانین و مقررات را به دقت مطالعه کنید</p>
+            </div>
+        </div>
+    </header>
+
+  
+    <main class="container">
+        <div class="row">
+           
+            <div class="col-lg-3">
+                <div class="rules-sidebar">
+                    <div class="rules-nav animate-on-scroll delay-1">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#rules">قوانین عمومی</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">درباره ما</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#guide">راهنمای استفاده</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#privacy">حریم خصوصی</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#banned">محتوای ممنوعه</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#penalties">جرایم و مجازات</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="col-lg-9">
+                <div class="rules-container animate-on-scroll delay-2">
+                   
+                    <section id="rules" class="rules-section">
+                        <h2 class="rules-section-title">قوانین عمومی</h2>
+                        
+                        <div class="rules-item">
+                            <h3 class="rules-item-title">1. شرایط استفاده</h3>
+                            <div class="rules-item-content">
+                                <p>با استفاده از ربات روبی چت، شما موافقت می‌کنید که این قوانین را رعایت کنید. در صورت عدم رعایت، حساب کاربری شما ممکن است مسدود شود.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rules-item">
+                            <h3 class="rules-item-title">2. سن کاربران</h3>
+                            <div class="rules-item-content">
+                                <p>حداقل سن برای استفاده از ربات 12 سال است. کاربران زیر 12  سال مجاز به استفاده از ربات نیستند.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rules-item">
+                            <h3 class="rules-item-title">3. مسئولیت‌پذیری</h3>
+                            <div class="rules-item-content">
+                                <p>هر کاربر مسئول تمام محتوایی است که ارسال می‌کند. روبی چت مسئولیتی در قبال گفتگوهای کاربران ندارد.</p>
+                            </div>
+                        </div>
+                    </section>
+                   
+                    <section id="about" class="rules-section">
+                        <h2 class="rules-section-title">درباره ما</h2>
+                        
+                        <div class="rules-item">
+                            <h3 class="rules-item-title">تیم روبی چت</h3>
+                            <div class="rules-item-content">
+                                <p>ربات روبی چت یک محصول هوشمند برای ایجاد ارتباطات ناشناس و امن بین کاربران است. ما با ارائه فیلترهای پیشرفته، محیطی امن برای گفتگو فراهم کرده‌ایم.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="rules-item">
+                            <h3 class="rules-item-title">اهداف ما</h3>
+                            <div class="rules-item-content">
+                                <ul>
+                                    <li>ایجاد محیطی امن برای گفتگوی ناشناس</li>
+                                    <li>ارائه فیلترهای هوشمند برای تطابق بهتر کاربران</li>
+                                    <li>حفظ حریم خصوصی کاربران</li>
+                                    <li>مبارزه با محتوای نامناسب و غیراخلاقی</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    
+                
+                    <section id="guide" class="rules-section">
+                        <h2 class="rules-section-title">راهنمای استفاده</h2>
+                        
+                        <div class="rules-item">
+                            <h3 class="rules-item-title">شروع کار با ربات</h3>
+                            <div class="rules-item-content">
+                                <ol>
+                                    <li>ربات را در روبیکا با آدرس @rubychat_bot پیدا کنید</li>
+                                    <li>روی دکمه "شروع" کلیک کنید</li>
+                                    <li>ترجیحات خود را انتخاب کنید (جنسیت، سن، شهر)</li>
+                                    <li>گفتگو را شروع کنید</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+                    
+                   
+                    <section id="privacy" class="rules-section">
+                        <h2 class="rules-section-title">حریم خصوصی</h2>
+                        
+                        <div class="rules-item">
+                            <h3 class="rules-item-title">اطلاعات جمع‌آوری شده</h3>
+                            <div class="rules-item-content">
+                                <p>ما فقط اطلاعات ضروری برای ارائه خدمات را جمع‌آوری می‌کنیم که شامل:</p>
+                                <ul>
+                                    <li>شناسه کاربری در روبیکا</li>
+                                    <li>جنسیت (در صورت انتخاب)</li>
+                                    <li>محدوده سنی (در صورت انتخاب)</li>
+                                    <li>شهر و استان (در صورت انتخاب)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="rules-item">
+                            <h3 class="rules-item-title">حفاظت از داده‌ها</h3>
+                            <div class="rules-item-content">
+                                <p>تمام اطلاعات کاربران به صورت رمزنگاری شده ذخیره می‌شوند و در اختیار هیچ شخص ثالثی قرار نمی‌گیرند.</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                  
+                    <section id="banned" class="rules-section">
+                        <h2 class="rules-section-title">محتوای ممنوعه</h2>
+                        
+                        <div class="rules-item">
+                            <h3 class="rules-item-title">انواع محتوای غیرمجاز</h3>
+                            <div class="rules-item-content">
+                                <p>ارسال هرگونه محتوای زیر ممنوع است و منجر به مسدود شدن حساب کاربری می‌شود:</p>
+                                <ul>
+                                    <li>محتوای مستهجن و غیراخلاقی</li>
+                                    <li>تبلیغات و اسپم</li>
+                                    <li>مطالب توهین‌آمیز و نژادپرستانه</li>
+                                    <li>تبلیغ مواد مخدر و داروهای غیرمجاز</li>
+                                    <li>اشتراک گذاری اطلاعات شخصی دیگران</li>
+                                    <li>هرگونه محتوای غیرقانونی</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    
+                    <section id="penalties" class="rules-section">
+                        <h2 class="rules-section-title">جرایم و مجازات</h2>
+                        
+                        <div class="rules-item">
+                            <h3 class="rules-item-title">سیستم گزارش و مسدودسازی</h3>
+                            <div class="rules-item-content">
+                                <p>در صورت تخلف کاربران، مجازات‌های زیر اعمال می‌شود:</p>
+                                <ul>
+                                    <li>تخلف جزئی: اخطار کتبی و محدودیت موقت</li>
+                                    <li>تخلف متوسط: مسدودسازی 72 ساعته</li>
+                                    <li>تخلف شدید: مسدودسازی دائمی حساب کاربری</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <a href="https://arsham-kurddev.ir/ruby-chat" class="footer-logo">
+                        <i class="bi bi-chat-dots"></i>
+                        روبی چت
+                    </a>
+                    <p class="footer-about">
+                        روبی چت یک ربات چت ناشناس هوشمند در پیام‌رسان روبیکا است که به شما امکان می‌دهد به صورت تصادفی و با حفظ حریم خصوصی با افراد جدید آشنا شوید.
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h3 class="footer-title">لینک‌های سریع</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://arsham-kurddev.ir/ruby-chat">خانه</a></li>
+                        <li><a href="privacy.html">قوانین و حریم خصوصی</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-title">لینک‌های مفید</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://rubika.ir/rubychat_bot" target="_blank">شروع چت در روبیکا</a></li>
+                        <li><a href="https://rubika.ir/rubychat" target="_blank">کانال روبی چت</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h3 class="footer-title">تماس با ما</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="bi bi-robot"></i>
+                            <span>@rubychat_bot</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-people"></i>
+                            <span>@rubychat</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                <p>© ۲۰۲۳ روبی چت. تمام حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+       
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                const navLink = document.querySelector(`.rules-nav .nav-link[href="#${id}"]`);
+                
+                if (entry.isIntersecting) {
+                    document.querySelectorAll('.rules-nav .nav-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    navLink.classList.add('active');
+                }
+            });
+        }, {threshold: 0.5});
+
+        document.querySelectorAll('.rules-section').forEach(section => {
+            observer.observe(section);
+        });
+
+       
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+
+     
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+</html>

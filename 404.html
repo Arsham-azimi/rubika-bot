@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه پیدا نشد - 404</title>
+    
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css">
+    
+   
+    <style>
+        :root {
+            --primary-color: #E91E63;
+            --secondary-color: #9C27B0;
+            --accent-color: #FF9800;
+            --dark-color: #212121;
+            --light-color: #F5F5F5;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            font-family: 'Vazir', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: var(--dark-color);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .error-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            line-height: 1;
+            animation: pulse 2s infinite;
+        }
+        
+        .error-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .error-message {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        .error-image {
+            font-size: 10rem;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .btn-primary {
+            background: var(--gradient);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(233, 30, 99, 0.3);
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(233, 30, 99, 0.3);
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* رسپانسیو */
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .error-message {
+                font-size: 1rem;
+            }
+            
+            .error-image {
+                font-size: 8rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .error-code {
+                font-size: 4rem;
+            }
+            
+            .error-title {
+                font-size: 1.5rem;
+            }
+            
+            .error-image {
+                font-size: 6rem;
+            }
+            
+            .btn-primary, .btn-outline-primary {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container animate__animated animate__fadeIn">
+        <div class="error-image">
+            <i class="bi bi-emoji-frown"></i>
+        </div>
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">صفحه مورد نظر یافت نشد!</h2>
+        <p class="error-message">
+            متأسفیم، اما صفحه‌ای که به دنبال آن هستید وجود ندارد یا ممکن است حذف شده باشد. لطفاً آدرس را بررسی کنید یا از دکمه‌های زیر استفاده نمایید.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="/" class="btn btn-primary">
+                <i class="bi bi-house-door"></i> بازگشت به خانه
+            </a>
+            <a href="javascript:history.back()" class="btn btn-outline-primary">
+                <i class="bi bi-arrow-right"></i> بازگشت به صفحه قبل
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

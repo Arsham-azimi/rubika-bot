@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطای ۴۰۰ - درخواست نامعتبر </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css">
+    <style>
+        :root {
+            --primary-color: #E91E63;
+            --secondary-color: #9C27B0;
+            --dark-color: #212121;
+            --light-color: #F5F5F5;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        body {
+            font-family: 'Vazir', sans-serif;
+            background-color: #f8f9fa;
+            color: var(--dark-color);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .error-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .error-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+        
+        .error-header {
+            background: var(--gradient);
+            color: white;
+            padding: 30px;
+        }
+        
+        .error-icon {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        .error-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .error-subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+        }
+        
+        .error-body {
+            padding: 40px;
+        }
+        
+        .error-text {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        .error-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-error {
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary-error {
+            background: var(--gradient);
+            color: white;
+            border: none;
+        }
+        
+        .btn-primary-error:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(233, 30, 99, 0.3);
+        }
+        
+        .btn-outline-error {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-outline-error:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .error-footer {
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        @media (max-width: 768px) {
+            .error-title {
+                font-size: 2.2rem;
+            }
+            
+            .error-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .error-body {
+                padding: 30px 20px;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+            }
+            
+            .btn-error {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-card animate__animated animate__fadeIn">
+            <div class="error-header">
+                <div class="error-icon">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+                <h1 class="error-title">۴۰۰</h1>
+                <p class="error-subtitle">درخواست نامعتبر</p>
+            </div>
+            
+            <div class="error-body">
+                <p class="error-text">
+                    متأسفیم! درخواستی که ارسال کرده‌ید توسط سرور قابل پردازش نیست.<br>
+                    این ممکن است به دلیل مشکل در داده‌های ارسالی یا خطایی در فرمت درخواست باشد.
+                </p>
+                
+                <div class="error-actions">
+                   
+                    <a href="https://arsham-kurddev.ir/" class="btn btn-error btn-outline-error">
+                        <i class="bi bi-house"></i> بازگشت به صفحه اصلی
+                    </a>
+                </div>
+            </div>
+            
+            <div class="error-footer">
+                <p>اگر مشکل ادامه داشت، لطفاً از طریق <a href="https://rubika.ir/arsham_kurd_30" style="color: var(--primary-color);">پشتیبانی روبیکا</a> با ما در تماس باشید.</p>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', function() {
+            const errorCard = document.querySelector('.error-card');
+            errorCard.classList.add('animate__animated', 'animate__fadeInUp');
+        });
+    </script>
+</body>
+</html>

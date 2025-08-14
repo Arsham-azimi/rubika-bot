@@ -1,0 +1,9 @@
+<FilesMatch "\.(json|txt|env)$">
+
+    Require ip 127.0.0.1
+    Require ip <ip you host>
+
+    Require all denied
+</FilesMatch>
+
+Options -Indexes
